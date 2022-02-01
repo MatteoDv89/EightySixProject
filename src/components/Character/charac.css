@@ -14,9 +14,9 @@
 }
 
 
-.content{
+.container .content{
       position:relative;
-    top:50px;
+    top:20px;
     left:0px;
     right:0px;
     

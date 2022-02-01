@@ -7,9 +7,31 @@ import './video.css'
 const Video = () => {
 
     const[animeList,setAnimeList] = useState([]);
+    const[modal,setModal] = useState(false)
+    const [numEpisode,setNumEpisode] = useState(null)
+    const pathImg = "/assets/"
+    
+    const url = `https://autoembed.xyz/tv/imdb/tt13718450-1-${animeList[numEpisode]}`;
+
+   
+    useEffect(()=>{
+        setAnimeList([
+            "1","2","3","4","5","6","7","8","9","10","11","12"
+        ])
+    },[])
 
     
 
+    const openModal = async (ep) => {
+        
+         setNumEpisode(parseInt(ep) - 1)
+        setModal(true)
+    }
+    const closeModal = () => {
+        setModal(!modal)
+    }
+
+    
 
 
 
@@ -18,11 +40,35 @@ const Video = () => {
         <div className="containerVideo">
            
             <div className="content">
-                <div className="card">
-                    <div className="modal">
-                        <iframe  src="https://www.youtube.com/embed/VSdS29SDvn4"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                       
-                    </div>                  
+                <div className="card_video">
+                    {modal && (
+                        <>
+                        <div className="videoPopUp">
+                            <div className="contentPopUp">
+                                <iframe src={url} allowFullScreen title={url}></iframe>
+                                <span onClick={closeModal} className="closeBtn">close</span>
+                            </div>
+                        </div>
+                        </>
+                    )}
+
+                    
+                    <>
+                    {animeList !== [] && (
+                        animeList?.map((eps)=>{
+                            return (
+                                
+                     <div className="modal">
+                         <span onClick={() => openModal(eps)}className="awaitMedia">
+                             <p>Ep.{eps}</p>
+                             <img src={pathImg + eps + ".png"} alt="img episode" />
+                             </span>                       
+                    </div>
+                            )
+                        })
+                    )}
+                    </> 
+
                 </div>
                 <div className="textBox">
                       <h2>Eighty Six - Saison 1</h2>

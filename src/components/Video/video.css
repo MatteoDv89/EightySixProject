@@ -1,22 +1,23 @@
 .modal{
 
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 80%;
     display:flex;
+    margin: 10px 20px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.modal iframe{
+    
+  
 
-    position:relative;
-    top: 25px;
-    width: 90%;
-    height: 70%;
-    border: none;
-    border-radius: 12px;
-    box-shadow: rgb(0 0 0 / 73%) 0px 26px 30px -10px,
-    rgb(0 0 0 / 69%) 0px 10px 16px -10px;
+}
+
+
+
+
+.modal .awaitMedia p{
+    color: #aaa;
+    font-size: 14px;
 }
 .containerVideo{
     width:100vw;
@@ -30,12 +31,333 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    
+}
+
+.modal span:hover{
+    transition: 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0px 0px 80px 20px #fff;
+    transform: scale(1.1) translateY(20px) translateY(-10px);
+    
+}
+
+.containerVideo .content{
+     position:relative;
+    top:20px;
+    left:0px;
+    right:0px;
+    
+    width:97%;
+    min-height: calc(100% - 130px);
+    display:flex;    
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    border-top:solid rgb(255,255,255,0.2) 1px ;
+    box-shadow: 0px 10px 10px 2px rgb(0,0,0,0.5);
+    overflow-x:hidden;
+    overflow-y: scroll;
+
+    
+    
+    
+    backdrop-filter: blur(2px);
+    margin-bottom: 15px;
+    border-radius: 12px;
 }
 
 
-.content{
+
+
+
+
+
+.containerVideo .content .textBox{
+    
+     width: 100%;
+    height: 50%;
+    
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    top:0px;
+}
+
+
+.containerVideo  .content .textBox h2{
+    padding: 0px 20px;
+    font-size: 22px;
+    margin: 0;
+    position: relative;
+    top: 55px;
+    left:50px;
+    color:#fff;
+    z-index:1;
+    
+}
+.containerVideo  .content .textBox p{
+    margin: 0;
+    position: relative;
+    top: 60px;
+    left: 50px;
+    
+    max-width: 80%;
+    font-size: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+    
+    max-height: 100%;
+    
+    
+    color:#fff;
+    z-index: 1;
+    
+
+    
+}
+
+
+.containerVideo .card_video{
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+    height: 50%;
+    
+    width:100%;
+    gap:0px;
+    position: relative;
+    width: 60%;
+    top:0px;
+    left:0px;
+    
+    
+    padding: 20px;
+    
+    
+}
+
+.videoPopUp{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: grayscale(100%) blur(5px);
+    background: rgb(0 0 0 / 73%);
+    transform: scale(1.1)
+    
+}
+
+.contentPopUp{
+
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    overflow: hidden;
+}
+
+.contentPopUp span{
+    color:#fff;
+    position:absolute;
+    top: 20px;
+    left: 20px;
+    cursor:pointer;
+    padding: 2px 10px;
+    
+
+}
+
+.awaitMedia img{
+    
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top:0px;
+    left:0px;
+    inset: 0;
+
+}
+
+.contentPopUp span:hover{
+
+     transition: 200ms ease-in-out;
+    text-shadow: 0px 00px 20px  #fff;
+    transform: scale(1.1);
+    
+
+}
+
+.contentPopUp iframe{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 30px;
+    padding: 0px 30px;
+    border: none;
+}
+
+
+
+@media (min-width: 616px){
+
+    
+.containerVideo .content .textBox{
+    
+     width: 50%;
+    height: 100%;
+    
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    top:0px;
+}
+
+
+    .containerVideo .card_video{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    height: 90%;
+    width:100%;
+    gap:0px;
+    position: relative;
+    width: 60%;
+    top:0px;
+    left:0px;}
+
+    .containerVideo .content{
      position:relative;
-    top:50px;
+    top:20px;
+    left:0px;
+    right:0px;
+    
+    width:97%;
+    min-height: calc(100% - 130px);
+    display:flex;    
+    flex-direction: row;
+    
+    justify-content: center;
+    align-items: center;
+    border-top:solid rgb(255,255,255,0.2) 1px ;
+    box-shadow: 0px 10px 10px 2px rgb(0,0,0,0.5);
+    overflow:hidden;
+    
+
+    
+    
+    
+    backdrop-filter: blur(2px);
+    margin-bottom: 15px;
+    border-radius: 12px;
+}    
+    
+    
+
+
+
+.modal .awaitMedia{
+    background: linear-gradient(45deg, rgb(255,255,255,0.2) 0%, transparent 50%,transparent 55%, rgb(255,255,255,0.3) 100%);
+    border-radius: 5px;
+    border-top: rgb(255,255,255,0.3);
+    backdrop-filter: blur(5px);
+    
+   width: 100%;
+   height: 100%;
+    box-shadow: rgb(0 0 0 / 73%) 0px 26px 30px -10px,
+    rgb(0 0 0 / 69%) 0px 10px 16px -10px;
+
+}
+
+.containerVideo  .content .textBox p{
+    margin: 0;
+    position: relative;
+    top: 60px;
+    left: 50px;
+    
+    max-width: 80%;
+    font-size: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+    
+    max-height: 100%;
+    
+    
+    color:#fff;
+    z-index: 1;
+    
+
+    
+}
+
+}
+
+@media (min-width: 1100px){
+
+
+   
+
+    .containerVideo .card_video{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    height: 90%;
+    width:100%;
+    gap:0px;
+    position: relative;
+    width: 60%;
+    top:0px;
+    left:0px;
+    
+    
+}
+
+    .containerVideo .content .textBox{
+        display:flex;
+    }
+
+    .containerVideo  .content .textBox p{
+    margin: 0;
+    position: relative;
+    top: 60px;
+    left: 50px;
+    
+    max-width: 80%;
+    font-size: 14px;
+    padding: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+    
+    max-height: 100%;
+    
+    
+    color:#fff;
+    z-index: 1;
+    
+
+    
+}
+    
+
+    .containerVideo .card_video{
+        width:80%;
+        position:relative;
+        left:50px;
+    
+    }
+
+    .containerVideo .content{
+     position:relative;
+    top:20px;
     left:0px;
     right:0px;
     
@@ -55,103 +377,5 @@
     border-radius: 12px;
 }
 
-
-
-
-.content .textBox{
-    
-     width: 50%;
-    height: 100%;
-    
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    position: relative;
 }
 
-
-.content .textBox h2{
-    padding: 0px 20px;
-    font-size: 32px;
-    margin: 0;
-    position: relative;
-    top: 25px;
-    color:#fff;
-}
-.content .textBox p{
-    margin: 0;
-    position: relative;
-    top: 35px;
-    
-    max-width: 80%;
-    font-size: 16px;
-    padding: 20px;
-    
-    max-height: 100%;
-    
-    color:#fff;
-    z-index: 1;
-    
-
-    
-}
-
-
-
-
-
-@media (max-width: 676px){
-
-    .content .textBox p{
-    margin: 0;
-    
-    max-width: 80%;
-    font-size: 0.8em;
-    padding: 20px;
-    transform: translateY(-45px);
-    
-    height: 380px;
-    overflow: scroll;
-    }
-    .content .textBox h2{
-        font-size: 30px;
-        color:#fff;
-    }
-    .content .fido{
-    transform: scale(0.2);
-    position:fixed;
-    top: -210px;
-    z-index: 1;
-    right: -250px;
-    display:none;
-    
-}
-    
-    
-        
-
-    ::-webkit-scrollbar {
-        display: none;
-    }
-
-  
-    .content .card .card_item:hover p{
-    
-    opacity: 1;
-    visibility: visible;
-    transition: 0.5s;
-    padding: 0px 15px;
-    width: 50%;
-    transform: translate(-80px,-20px);
-    
-    
-    font-size: 0.7em;
-  
-}
-            
-    
-
-
-}
