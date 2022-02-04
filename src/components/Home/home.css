@@ -42,7 +42,7 @@
     position:absolute;
     bottom:0px;
     right:0px;
-    transform: translateX(65px);
+    
     height:  40vh;
 
 
@@ -173,7 +173,7 @@
 .containerHome .imgBox img{
     position:absolute;
     bottom:0px;
-    right:0px;
+    right:100px;
     height:  90vh;
 
 

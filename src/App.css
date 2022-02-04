@@ -9,9 +9,7 @@
 
 }
 
-body{
-    overflow: hidden;
-}
+
 
 
 .nav{
@@ -36,10 +34,11 @@ body{
 
  .nav ul{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap:20px;
     list-style: none;
+    overflow: hidden;
   
 
 }
