@@ -237,6 +237,13 @@
         position: relative;
     }
 
+    .modal p{
+        position: relative;
+        top: -20px;
+        
+       
+    }
+
   
  .modal .awaitMedia{
     background: linear-gradient(45deg, rgb(255,255,255,0.2) 0%, transparent 50%,transparent 55%, rgb(255,255,255,0.3) 100%);
@@ -251,6 +258,7 @@
     rgb(0 0 0 / 69%) 0px 10px 16px -10px;
 
 }
+
 
 .modal .awaitMedia img{
     width: 100%;
