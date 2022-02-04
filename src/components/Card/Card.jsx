@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import ReactPaginate from 'react-paginate';
+import './card.css'
 
 
 
@@ -8,8 +10,7 @@ import React, { useState } from 'react';
 
 const Card = () => {
 
-    const [perso,setPerso] = useState([
-        {
+    const [perso,setPerso] = useState([ {
             id:'lena',
             name:'Mirize Vladilena',
             img:'/assets/vladilena.png'
@@ -30,18 +31,38 @@ const Card = () => {
             id:'anju',
             name:'Emma Anju',
             img:'/assets/anju.png'
-        }
-    ])
+        },
+        {
+            id:'raiden',
+            name:'Shuga raiden',
+            img:'/assets/raiden.png'
+        },
+        {
+            id:'kurena',
+            name:'Kukumila kurena',
+            img:'/assets/kurena.png'
+        },
+        {
+            id:'Frederica',
+            name:'Frederica',
+            img:'/assets/frederica.png'
+        },
+     {
+            id:'Fido',
+            name:'Fido',
+            img:'/assets/Fido.png'
+        }])
     
+        const [pageNumber, setPageNumber] = useState(0)
+        const start = 0
+        const characPerPage = 4;
+        const countofPage = Math.ceil(perso.length / characPerPage)
   
+        console.log(countofPage)
 
-    return (
-              
-        <>
-        <div className="cardWidth">
-        {perso.map((charac) => {
+        const display = perso.slice(pageNumber * characPerPage, pageNumber * characPerPage + characPerPage).map((charac) => {
             return (
-                <div className="card">
+                <div key={charac.id} className="card">
                                <div  className="card_item">                                
                                 <h3>{charac.name}</h3>
                                 <p>Lorem, ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit.adipisicing elit.</p>
@@ -51,9 +72,41 @@ const Card = () => {
                             
                 </div>   
             )
-        })}
+
+        })
+
+        const changePage = ({selected}) => {
+            setPageNumber(selected)
+
+        }
+
+    return (
+              
+      
+
+            
+        <>
+        <div className="cardWidth">
+        {display}
+       
         </div>
+         <ReactPaginate 
+            previousLabel={"Previous"}
+            nextLabel={"Next"}
+            pageCount={countofPage}
+            onPageChange={changePage}
+            containerClassName={"paginationBtn"}
+            previousLinkClassName={"previousBtn"}
+            nextLinkClassName={"nextBtn"}
+            disabledClassName={"paginationDisabled"}
+            activeClassName={"paginationActive"}
+            
+            
+            
+        />
+        
         </>
+        
         
          
     )

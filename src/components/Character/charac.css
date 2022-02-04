@@ -22,7 +22,10 @@
     
     width:97%;
     height: calc(100% - 130px);
-    display:flex;    
+    display:flex;  
+    flex-direction: column;
+      
+
     justify-content: center;
     align-items: center;
     border-top:solid rgb(255,255,255,0.2) 1px ;
@@ -38,6 +41,268 @@
 
 
 
+
+
+ ::-webkit-scrollbar {
+
+    width: 12px;
+    height: 100%;
+}
+ 
+     ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+ ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.cardWidth{
+ display:flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ align-items: center;
+ width: 100%;
+ height: 100%;
+ overflow: scroll;
+ gap:50px;
+ position:relative;
+ 
+}
+
+.card {
+    
+    width: 80%;
+    height: 350px;
+    position: relative;
+    top:50px;
+    transition: ease 1s;
+    box-shadow: rgb(0 0 0 / 73%) 0px 26px 30px -10px,
+    rgb(0 0 0 / 69%) 0px 16px 10px -10px;
+    
+}
+.card .card_item{
+    height: 200px;
+}
+
+.card .card_item img{
+    width: 150px;
+    position: absolute;
+    bottom: 0px;
+    right:0px;
+    
+    transition: ease 0.5s;
+}
+
+.card .card_item p{
+    color:#fff;
+    font-size: 13px;
+    width: 50%;
+    position: relative;    
+    left: 20px;
+}
+.card .card_item h3{
+    color: #fff;
+    position: relative;
+    width: 70%;
+    left: 20px;
+    
+}
+
+.card .card_item button{
+
+    position: relative;
+    left: 20px;
+    border: none;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    font-size: 16px;
+    padding: 2px 10px;
+    margin-top: 10px;
+    color: #fff;
+    font-weight: 600;
+    background: linear-gradient( 180deg, rgb(228, 12, 12) 80%, transparent 100%);
+}
+
+
+
+.card:hover {
+       box-shadow: 0 0 1px rgb(99, 1, 1), 0 0 8px rgb(254, 13, 13), 0 0 50px rgb(244, 10, 10);
+    
+    
+}
+
+.card:hover .card_item img{
+    width: 200px;
+    transition: 0.5s ease;
+    transform: translateX(50px);
+    transition-delay: 0.25s;
+}
+
+
+@media (min-width: 576px){
+
+    .content{
+        gap: 25px;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+ .cardWidth{
+     
+ display:flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+ height: 100%;
+ overflow: scroll;
+ gap:25px;
+ position:relative;
+ 
+ 
+}
+
+.card {
+    
+    width: 200px;
+    height: 350px;
+    position: relative;
+    background: linear-gradient(135deg, rgb(0,0,0,0.5) 40%, rgb(255,255,255,0.1) 60%, rgba(255, 0, 0, 0.315));
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+    
+    transform: translateY(-50px);
+
+    transition: ease 0.7s;
+    box-shadow: rgb(0 0 0 / 73%) 0px 26px 30px -10px,
+    rgb(0 0 0 / 69%) 0px 16px 10px -10px;
+    
+}
+.card .card_item{
+    height: 100%;
+    position:relative;
+}
+
+.card .card_item img{
+    width: 200px;
+    position: absolute;
+    bottom: 0px;
+    right:0px;
+    
+    transition: ease 0.7s;
+}
+
+.card .card_item p{
+    
+    width: 150px;
+    height: 150px;
+    
+    opacity: 0;
+}
+.card .card_item h3{
+    color: #fff;
+    position: relative;
+    width: 70%;
+    left: 20px;
+    text-align: center;
+    
+}
+
+.card .card_item button{
+
+    position: absolute;
+    left: 20px;
+    bottom: -30px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    font-size: 16px;
+    padding: 2px 10px;
+    margin-top: 10px;
+    color: #fff;
+    font-weight: 600;
+    background: linear-gradient( 180deg, rgba(228, 12, 12, 0.393) 80%, transparent 100%);
+}
+
+
+
+.card:hover {
+       box-shadow: 0 0 1px rgb(99, 1, 1), 0 0 8px rgb(254, 13, 13), 0 0 50px rgb(244, 10, 10);
+       width: 300px;
+       height: 150px;
+       transform: translateY(50px);
+       margin: 0px 30px;
+       transition-delay: 1s;
+       transition: ease 0.75s;
+       
+    
+    
+}
+
+.card:hover .card_item p{
+    display:block;
+    position: relative;
+    right:0px;
+    opacity: 1;
+    color: #fff;
+    
+    font-size: 12px;
+    
+    transition-delay: 1s;
+    transition: 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  
+}
+
+.card:hover .card_item h3{
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.card:hover .card_item img{
+    width: 250px;
+    transition: 0.5s ease;
+    transform: translateX(50px);
+    transition-delay: 0.25s;
+    transition: ease 1s;
+}
+
+
+
+
+
+
+}
+
+/* 
+
+.content .card .card_item{
+    
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    transition:1s;    
+    width: 180px;
+    height: 350px;
+    border-top: 1px solid rgb(255,255,255,0.2);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 10px 7px 6px rgb(0,0,0,0.3);
+    border-radius: 12px;
+    background: linear-gradient(135deg,rgba(9, 5, 5, 0.256) 50%, rgba(220, 18, 3, 0.342));
+    
+    
+}
+
+
+
 .content .card{
     
     width: 20%;
@@ -48,7 +313,7 @@
     align-items: center;  
     padding: 0px 26px;
     position: relative;
-    transition: 0.75s;
+    transition: ease 1s;
     
  
    
@@ -63,58 +328,18 @@
     align-items: center;
 }
 
-.content .card:hover{
-    margin:0px 80px;
-    
-}
 
- ::-webkit-scrollbar {
-
-    width: 12px;
-}
- 
-     ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    border-radius: 10px;
-}
- 
- ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-}
-
-
-
-
-
-
-.content .card .card_item{
-    
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-    transition:0.5s;    
-    width: 180px;
-    height: 350px;
-    border-top: 1px solid rgb(255,255,255,0.2);
-    backdrop-filter: blur(5px);
-    box-shadow: 0px 10px 7px 6px rgb(0,0,0,0.3);
-    border-radius: 12px;
-    background: linear-gradient(135deg,rgba(9, 5, 5, 0.256) 50%, rgba(220, 18, 3, 0.342));
-    
-}
 .content .card .card_item img{
     width: 220px;
     
-    transition: 0.5s;
+    
+   
     
 }
-.content .card .card_item:hover img{
+.content .card:hover .card_item img{
     width: 300px;
     transform: translateX(80px);
-    transition: 0.5s;
+    transition: 1s 
     
     
     
@@ -132,7 +357,7 @@
 
 }
 
-.content .card .card_item:hover p{
+.content .card:hover .card_item p{
     
     opacity: 1;
     visibility: visible;
@@ -144,18 +369,23 @@
     color:#fff;
     transition: 0.5s;
     transition-delay: 0.25s;
+    
 }
 
 
-.content .card .card_item:hover{
-    width: 150%;
+.content .card:hover .card_item{
+    width: 80%;
     height: 50%;
     box-shadow: 0 0 1px rgb(99, 1, 1), 0 0 8px rgb(254, 13, 13), 0 0 50px rgb(244, 10, 10);
-    transition: 0.5s;
+    transition: 1s;
     transform: translateY(70px);
     transition-delay: 0.12s;
+    
+  
+      
+    
    
-    /* position: absolute; */
+     position: absolute; 
     
     z-index:5;
 
@@ -174,7 +404,7 @@
     transition: 2s;;
     
 }
-.content .card .card_item:hover h3{
+.content .card:hover .card_item h3{
     opacity: 0;
     visibility: hidden;
     transition: 0.1s;
@@ -187,12 +417,17 @@
 .content .card button{
     background-color: rgb(211, 39, 39);
     border: none;
-    width: 80%;
+    width: 120px;
+    height: 40px;
+    ;
     
     border-top-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    padding: 5px 26px;
+    
+    display: block;
     font-size: 16px;
+    padding: 5px;
+    padding-left:15px;
     color:#f9f9f9;
     font-weight: 600;
     
@@ -206,11 +441,19 @@
     bottom:-8%;
 }
 
-.card .card_item:hover button{
+.card:hover .card_item button{
     width: 50%;
     left:0px;
     
     transition-delay: 0.12s;
+}
+
+.card:hover {
+       
+      margin: 0px 20px;
+      
+      width: 80%;
+      transition: ease 1s;
 }
 
 
@@ -219,6 +462,14 @@
 
 @media (max-width: 1200px){
 
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
     .content .textBox p{
     margin: 0;
     
@@ -315,6 +566,8 @@
     }
 
    
+
+   
     
 }
 
@@ -376,4 +629,4 @@
 
   
 
-}
+} */

@@ -5,12 +5,11 @@ import Video from "./components/Video/Video";
 import Nav from "./components/Nav";
 import Home from "./components/Home/Home";
 
-
 function App() {
   return (
     <>
       <Router>
-        <Nav/>
+        <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/character" element={<Character />} />
