@@ -9,19 +9,21 @@
 
 }
 
+body{
+    overflow: hidden;
+}
+
 
 .nav{
     height: 60px;
-    width: 100%;
+    width: 100vw;
     display:flex;
     justify-content: space-between;
     align-items: center;
     margin: 0;
     padding: 0px 20px;
-    z-index:99999;
-   
-   
-  
+    z-index:99999;  
+    overflow: hidden;
 
     position:fixed;
 
