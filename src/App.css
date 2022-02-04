@@ -64,8 +64,9 @@
 
  .nav ul .navlink:hover{
      text-shadow: 0 0 5px red, 0 0 20px red, 0 0 80px red;
-     transition-delay: 0.75s;
-}
+     
+ }
+/* 
  .nav ul .navlink span:nth-child(1){
 
 top:0px;
@@ -117,5 +118,5 @@ background: linear-gradient(360deg, transparent, red);}
     transition: 0.5s;
     
     transition-delay: 0.50s;
-}
+} */
 

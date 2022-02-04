@@ -79,7 +79,7 @@ const Video = () => {
                         Officiellement, le 86è district n'existe pas. Pourtant, c'est grâce aux combattants qui s'y trouvent, parmi lesquels l'escadron Spearhead, dirigé par Shin et commandé par Lena, que la République a retrouvé un semblant de paix.
 
                     </p>
-                    
+                    <img id="shinei" src="/assets/shinhome.png" alt="" />
                 </div>
               
             </div>
