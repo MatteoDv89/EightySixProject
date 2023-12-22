@@ -11,7 +11,7 @@ const Video = () => {
     const [numEpisode,setNumEpisode] = useState(null)
     const pathImg = "/assets/"
     
-    const url = `https://autoembed.xyz/tv/imdb/tt13718450-1-${animeList[numEpisode]}`;
+    const url = `https://autoembed.to/tv/imdb/tt13718450-1-${animeList[numEpisode]}`;
 
    
     useEffect(()=>{
